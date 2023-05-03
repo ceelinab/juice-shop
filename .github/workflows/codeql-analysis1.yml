@@ -2,18 +2,6 @@ name: CodeQL Analysis
 
 on:
   push:
-    branches: [ main ]
-
-jobs:
-  analyze:
-    name: Analyze code with CodeQL
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v1
-      with:
-        languages: [javascript, python, typescript]
-    - name: Build and analyze code with CodeQL
-      uses: github/codeql-action/analyze@v1
+    branches: [main]
+  pull_request:
+    branches: [main]
